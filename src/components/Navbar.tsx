@@ -68,9 +68,9 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 dark:border-white/10 bg-white/90 dark:bg-[#070B11]/90 backdrop-blur-md transition-colors duration-200">
-      {/* MANA SHU QUTI HAMMA ELEMENTLARNI PASTKI BLOK BILAN BIR XIL O'QQA SOLADI HAMDA MARKAZLAYDI */}
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-center gap-4 sm:gap-6 lg:gap-8">
+    <header className="sticky top-2 sm:top-4 z-50 w-full flex justify-center px-3 sm:px-6 pointer-events-none">
+      {/* O'RTAGA MARKAZLASHTIRILGAN FLOATING NAVBAR KONTEYNERI */}
+      <div className="pointer-events-auto w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4 bg-white/95 dark:bg-[#0D1420]/95 backdrop-blur-xl border border-slate-200/80 dark:border-white/10 rounded-2xl shadow-2xl transition-all duration-200">
         
         {/* 1. Chap tomon: Hamburger Menu + Technopark Logo */}
         <div className="flex items-center gap-3 shrink-0">
