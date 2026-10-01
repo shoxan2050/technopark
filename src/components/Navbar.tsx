@@ -68,8 +68,8 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 dark:border-white/10 bg-white/90 dark:bg-[#070B11]/90 backdrop-blur-md transition-colors duration-200">
-      {/* MANA SHU QUTI HAMMA ELEMENTLARNI PASTKI BLOK BILAN BIR XIL O'QQA SOLADI: max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 */}
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      {/* MANA SHU QUTI HAMMA ELEMENTLARNI PASTKI BLOK BILAN BIR XIL O'QQA SOLADI: max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 */}
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         
         {/* 1. Chap tomon: Technopark Logo (Pastki kartochkaning chap burchagi bilan bir chiziqda) */}
         <Link 

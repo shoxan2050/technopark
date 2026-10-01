@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#070B11] to-transparent pointer-events-none" />
 
       {/* MAIN CONTAINER */}
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
           {/* ── LEFT: Headline & CTA (7 cols) ── */}

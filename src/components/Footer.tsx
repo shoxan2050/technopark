@@ -4,7 +4,7 @@ import { Heart } from 'lucide-react';
 export const Footer: React.FC = () => {
   return (
     <footer className="w-full flex justify-center border-t border-slate-200/60 dark:border-white/10 bg-slate-100/60 dark:bg-[#05080E] text-slate-700 dark:text-slate-300 transition-colors pt-16 pb-12">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           

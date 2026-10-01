@@ -16,7 +16,7 @@ export const GrantsSection: React.FC = () => {
 
   return (
     <section id="grants" className="w-full flex justify-center py-24 border-b border-slate-200/20 dark:border-white/10">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16" data-animate>

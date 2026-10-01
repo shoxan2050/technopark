@@ -43,7 +43,7 @@ export const AdminPanel: React.FC = () => {
 
   return (
     <section id="admin-panel" className="w-full flex justify-center py-16 border-b border-white/10 bg-[#0E1117]">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="mb-8">
           <span className="text-[10px] font-bold text-amber-400 uppercase tracking-widest px-2.5 py-1 rounded bg-amber-500/10 border border-amber-500/20">

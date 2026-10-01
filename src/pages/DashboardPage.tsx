@@ -47,8 +47,8 @@ export function DashboardPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F8FAFC]/80 to-[#F8FAFC] dark:via-[#070B11]/80 dark:to-[#070B11]" />
         </div>
 
-        {/* 2. ASOSIY REZIDENT DASHBOARD PANEL (QOQ O'RTADA: MAX-W-7XL MX-AUTO) */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 flex flex-col items-center">
+        {/* 2. ASOSIY REZIDENT DASHBOARD PANEL (QOQ O'RTADA: MAX-W-6XL MX-AUTO) */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 flex flex-col items-center">
           
           {/* Foydalanuvchi ma'lumotlari va Tugmalar qutisi */}
           <div className="w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/90 dark:border-white/10 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">

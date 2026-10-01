@@ -24,7 +24,7 @@ export const StartupGrid: React.FC = () => {
   const categories = ['All', 'AI & ML', 'Hardware', 'FinTech', 'EdTech', 'GreenTech', 'E-commerce'];
 
   let filtered = startups.filter(s => {
-    const matchesCat = selectedCategory === 'All' || s.category === selectedCategory;
+    const matchesCat = selectedCategory === 'All' || selectedCategory === 'Barchasi' || s.category === selectedCategory;
     const matchesSearch = s.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           s.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           s.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -75,7 +75,7 @@ export const StartupGrid: React.FC = () => {
 
   return (
     <section id="startups" className="w-full flex justify-center py-24 border-b border-slate-200/60 dark:border-white/10">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10" data-animate>
@@ -100,10 +100,10 @@ export const StartupGrid: React.FC = () => {
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-3.5 py-1.5 text-xs transition-all whitespace-nowrap ${
-                  selectedCategory === cat ? 'seg-active' : 'seg-inactive'
+                  (selectedCategory === cat || (cat === 'All' && selectedCategory === 'Barchasi')) ? 'seg-active' : 'seg-inactive'
                 }`}
               >
-                {cat}
+                {cat === 'All' ? t.startups.allTab : cat}
               </button>
             ))}
           </div>
