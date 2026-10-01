@@ -11,6 +11,7 @@ import { AuthModal } from '../components/AuthModal';
 import { ChatModal } from '../components/ChatModal';
 import { AddStartupModal } from '../components/AddStartupModal';
 import { UserProfile } from '../components/UserProfile';
+import { AboutModal } from '../components/AboutModal';
 
 const GuestJoinBanner: React.FC = () => {
   const { t, setIsAuthModalOpen } = useApp();
@@ -61,6 +62,7 @@ export const LandingPage: React.FC = () => {
       <UserProfile />
       <AddStartupModal />
       <ChatModal />
+      <AboutModal />
     </div>
   );
 };

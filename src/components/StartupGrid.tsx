@@ -74,11 +74,11 @@ export const StartupGrid: React.FC = () => {
   };
 
   return (
-    <section id="startups" className="w-full flex justify-center py-24 border-b border-slate-200/60 dark:border-white/10">
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="startups" className="w-full flex justify-center py-8 sm:py-24 border-b border-slate-200/60 dark:border-white/10">
+      <div className="w-full max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10" data-animate>
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10" data-animate>
           <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 mb-2 block">
             {t.startups.badge}
           </span>

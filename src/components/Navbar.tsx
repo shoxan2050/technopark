@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Sun, Moon, Globe } from 'lucide-react';
+import { Sun, Moon, Globe, Menu } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useApp } from '../context/AppContext';
@@ -16,7 +16,8 @@ export const Navbar: React.FC = () => {
     t, 
     setIsAuthModalOpen, 
     setIsProfileOpen, 
-    setIsAddStartupModalOpen 
+    setIsAddStartupModalOpen,
+    setIsAboutModalOpen
   } = useApp();
   
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -71,21 +72,32 @@ export const Navbar: React.FC = () => {
       {/* MANA SHU QUTI HAMMA ELEMENTLARNI PASTKI BLOK BILAN BIR XIL O'QQA SOLADI: max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 */}
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         
-        {/* 1. Chap tomon: Technopark Logo (Pastki kartochkaning chap burchagi bilan bir chiziqda) */}
-        <Link 
-          to={currentUser ? "/dashboard" : "/"} 
-          className="flex items-center gap-2.5 shrink-0 group cursor-pointer"
-        >
-          <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 font-bold transition-all group-hover:bg-emerald-500/30">
-            T
-          </div>
-          <span className="text-slate-900 dark:text-white font-extrabold tracking-wider text-sm uppercase">
-            TECHNOPARK
-          </span>
-          <span className="text-[10px] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 px-1.5 py-0.5 rounded font-mono font-semibold">
-            HUB
-          </span>
-        </Link>
+        {/* 1. Chap tomon: Hamburger Menu + Technopark Logo */}
+        <div className="flex items-center gap-3 shrink-0">
+          <button
+            onClick={() => setIsAboutModalOpen(true)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-xs font-bold transition-all shadow-sm"
+            title="Technopark haqida (Biz haqimizda)"
+          >
+            <Menu className="w-4 h-4" />
+            <span className="hidden sm:inline">Biz haqimizda</span>
+          </button>
+
+          <Link 
+            to={currentUser ? "/dashboard" : "/"} 
+            className="flex items-center gap-2 shrink-0 group cursor-pointer"
+          >
+            <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 font-bold transition-all group-hover:bg-emerald-500/30">
+              T
+            </div>
+            <span className="text-slate-900 dark:text-white font-extrabold tracking-wider text-sm uppercase">
+              TECHNOPARK
+            </span>
+            <span className="text-[10px] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 px-1.5 py-0.5 rounded font-mono font-semibold">
+              HUB
+            </span>
+          </Link>
+        </div>
 
         {/* 2. O'rta: Navigatsiya havolalari */}
         <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-medium text-slate-600 dark:text-slate-300">

@@ -6,6 +6,7 @@ import { AuthModal } from '../components/AuthModal';
 import { UserProfile } from '../components/UserProfile';
 import { AddStartupModal } from '../components/AddStartupModal';
 import { ChatModal } from '../components/ChatModal';
+import { AboutModal } from '../components/AboutModal';
 import { initScrollAnimations } from '../utils/scrollAnimations';
 
 export const AdminPage: React.FC = () => {
@@ -28,6 +29,7 @@ export const AdminPage: React.FC = () => {
       <UserProfile />
       <AddStartupModal />
       <ChatModal />
+      <AboutModal />
     </div>
   );
 };

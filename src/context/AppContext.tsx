@@ -27,6 +27,7 @@ interface AppContextType {
   isAuthModalOpen: boolean;
   isAddStartupModalOpen: boolean;
   isProfileOpen: boolean;
+  isAboutModalOpen: boolean;
   activeChatStartup: Startup | null;
   
   toggleDarkMode: () => void;
@@ -36,6 +37,7 @@ interface AppContextType {
   setIsAuthModalOpen: (open: boolean) => void;
   setIsAddStartupModalOpen: (open: boolean) => void;
   setIsProfileOpen: (open: boolean) => void;
+  setIsAboutModalOpen: (open: boolean) => void;
   setActiveChatStartup: (startup: Startup | null) => void;
   
   addStartup: (startup: Omit<Startup, 'id' | 'likes' | 'likesCount' | 'createdAt'>) => Promise<void>;
@@ -130,6 +132,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [isAuthModalOpen, setIsAuthModalOpen] = useState<boolean>(false);
   const [isAddStartupModalOpen, setIsAddStartupModalOpen] = useState<boolean>(false);
   const [isProfileOpen, setIsProfileOpen] = useState<boolean>(false);
+  const [isAboutModalOpen, setIsAboutModalOpen] = useState<boolean>(false);
   const [activeChatStartup, setActiveChatStartup] = useState<Startup | null>(null);
 
   // Synchronize Dark Class on HTML root element reliably
@@ -456,6 +459,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       isAuthModalOpen,
       isAddStartupModalOpen,
       isProfileOpen,
+      isAboutModalOpen,
       activeChatStartup,
       toggleDarkMode,
       setLanguage,
@@ -464,6 +468,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       setIsAuthModalOpen,
       setIsAddStartupModalOpen,
       setIsProfileOpen,
+      setIsAboutModalOpen,
       setActiveChatStartup,
       addStartup,
       deleteStartup,
