@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* ============================================================
+   TAILWIND v4 — CLASS-BASED DARK MODE
+============================================================ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================================
+   DESIGN TOKENS
+============================================================ */
+:root {
+  /* Light */
+  --bg-page:       #F1F5F9;
+  --bg-card:       #FFFFFF;
+  --bg-card-alt:   #F8FAFC;
+  --bg-input:      #FFFFFF;
+  --text-primary:  #0F172A;
+  --text-secondary:#475569;
+  --text-muted:    #94A3B8;
+  --border:        rgba(15,23,42,0.10);
+  --border-strong: rgba(15,23,42,0.18);
+  --shadow-card:   0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06);
+  --shadow-lifted: 0 8px 30px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.05);
+  --emerald:       #059669;
+  --emerald-lt:    #ECFDF5;
+  --emerald-brd:   #A7F3D0;
+  --nav-bg:        rgba(255,255,255,0.92);
+  --nav-border:    rgba(15,23,42,0.09);
+}
+
+html.dark {
+  /* Dark */
+  --bg-page:       #070B11;
+  --bg-card:       #0E1521;
+  --bg-card-alt:   #111827;
+  --bg-input:      #0D1420;
+  --text-primary:  #F1F5F9;
+  --text-secondary:#94A3B8;
+  --text-muted:    #64748B;
+  --border:        rgba(255,255,255,0.07);
+  --border-strong: rgba(255,255,255,0.14);
+  --shadow-card:   0 4px 24px rgba(0,0,0,0.5);
+  --shadow-lifted: 0 12px 40px rgba(0,0,0,0.6);
+  --emerald:       #10B981;
+  --emerald-lt:    rgba(16,185,129,0.10);
+  --emerald-brd:   rgba(16,185,129,0.25);
+  --nav-bg:        rgba(7,11,17,0.92);
+  --nav-border:    rgba(255,255,255,0.07);
+}
+
+/* ============================================================
+   BASE
+============================================================ */
+*,*::before,*::after { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-feature-settings: "cv02","cv03","cv04","cv11";
+  letter-spacing: -0.013em;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ============================================================
+   CARDS
+============================================================ */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.2s ease;
+}
+.card:hover {
+  box-shadow: var(--shadow-lifted);
+  transform: translateY(-2px);
+}
+html.dark .card {
+  background-color: rgba(14,21,33,0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Back-compat alias */
+.glass-surface {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.25s ease, border-color 0.2s ease;
+}
+html.dark .glass-surface {
+  background-color: rgba(14,21,33,0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* ============================================================
+   LEADERSHIP CARD
+============================================================ */
+.leader-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.leader-card:hover {
+  box-shadow: var(--shadow-lifted);
+  transform: translateY(-4px);
+}
+html.dark .leader-card {
+  background-color: rgba(14,21,33,0.9);
+  border-color: var(--border-strong);
+}
+
+/* ============================================================
+   CALCULATOR WIDGET (Hero right column)
+============================================================ */
+.calc-card {
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border-strong);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lifted);
+}
+html.dark .calc-card {
+  background-color: rgba(14,21,33,0.95);
+  border-color: rgba(16,185,129,0.20);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(16,185,129,0.08);
+  backdrop-filter: blur(12px);
+}
+
+/* ============================================================
+   NAVIGATION
+============================================================ */
+.glass-nav-emerald {
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* ============================================================
+   INPUTS
+============================================================ */
+.glass-input-emerald {
+  background-color: var(--bg-input);
+  border: 1.5px solid var(--border-strong);
+  color: var(--text-primary);
+  border-radius: 10px;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8125rem;
+  width: 100%;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.glass-input-emerald::placeholder { color: var(--text-muted); }
+.glass-input-emerald:focus {
+  outline: none;
+  border-color: var(--emerald);
+  box-shadow: 0 0 0 3px rgba(5,150,105,0.12);
+}
+html.dark .glass-input-emerald:focus {
+  box-shadow: 0 0 0 3px rgba(16,185,129,0.15);
+}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+.btn-emerald {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg,#059669,#047857);
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.01em;
+  border-radius: 10px;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  box-shadow: 0 2px 12px rgba(5,150,105,0.30);
+  transition: all 0.2s cubic-bezier(0.34,1.56,0.64,1);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-emerald:hover   { background: linear-gradient(135deg,#047857,#065F46); box-shadow: 0 6px 20px rgba(5,150,105,0.40); transform: translateY(-1px); }
+.btn-emerald:active  { transform: translateY(0) scale(0.99); }
+.btn-emerald:disabled{ opacity:0.55; cursor:not-allowed; transform:none!important; }
+
+html.dark .btn-emerald         { background: linear-gradient(135deg,#10B981,#059669); box-shadow: 0 2px 14px rgba(16,185,129,0.38); }
+html.dark .btn-emerald:hover   { background: linear-gradient(135deg,#34D399,#10B981); box-shadow: 0 6px 24px rgba(16,185,129,0.48); }
+
+.btn-glass-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border-strong);
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  font-size: 0.75rem;
+  border-radius: 10px;
+  padding: 0.6rem 1.25rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn-glass-outline:hover { border-color: var(--emerald); color: var(--emerald) !important; }
+
+/* ============================================================
+   SEGMENT CONTROLS (filter pills, tabs)
+============================================================ */
+.seg-active   { background-color: #059669; color: #fff; border-radius: 8px; font-weight: 700; }
+.seg-inactive { color: var(--text-secondary); border-radius: 8px; font-weight: 500; }
+.seg-inactive:hover { background-color: var(--border); color: var(--text-primary); }
+
+html.dark .seg-active { background-color: #10B981; }
+
+/* ============================================================
+   BADGES
+============================================================ */
+.badge-emerald {
+  background-color: var(--emerald-lt);
+  color: var(--emerald);
+  border: 1px solid var(--emerald-brd);
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+  padding: 2px 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ============================================================
+   SCROLL ANIMATIONS
+============================================================ */
+[data-animate] {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
+}
+[data-animate="left"]  { opacity:0; transform: translateX(-38px); transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1); }
+[data-animate="right"] { opacity:0; transform: translateX(38px);  transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1); }
+[data-animate="scale"] { opacity:0; transform: scale(0.93);       transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.6s cubic-bezier(0.22,1,0.36,1); }
+
+[data-animate].in-view,
+[data-animate="left"].in-view,
+[data-animate="right"].in-view,
+[data-animate="scale"].in-view { opacity:1; transform:none; }
+
+[data-delay="100"]{transition-delay:0.10s}[data-delay="150"]{transition-delay:0.15s}
+[data-delay="200"]{transition-delay:0.20s}[data-delay="250"]{transition-delay:0.25s}
+[data-delay="300"]{transition-delay:0.30s}[data-delay="400"]{transition-delay:0.40s}
+[data-delay="500"]{transition-delay:0.50s}[data-delay="600"]{transition-delay:0.60s}
+
+/* ============================================================
+   MISC
+============================================================ */
+@keyframes pulseGlow {
+  0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}
+  50%    {box-shadow:0 0 18px 4px rgba(16,185,129,0.28)}
+}
+.pulse-glow { animation: pulseGlow 2.8s ease-in-out infinite; }
+
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#CBD5E1;border-radius:4px}
+html.dark ::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.12)}
+::selection{background:#059669;color:#fff}

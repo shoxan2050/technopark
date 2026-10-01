@@ -1,0 +1,289 @@
+import type { AppLanguage } from '../types';
+
+export const translations = {
+  uz: {
+    nav: {
+      ecosystem: "Ekotizim",
+      infrastructure: "Laboratoriyalar",
+      startups: "Startaplar",
+      grants: "Grantlar & Rezidentlik",
+      signIn: "Kirish",
+      signUp: "Ro'yxatdan o'tish",
+      profile: "Profilim",
+      myProjects: "Mening loyihalarim",
+      addProject: "+ Startap Qo'shish",
+      adminPanel: "Admin Panel",
+      signOut: "Tizimdan chiqish"
+    },
+    hero: {
+      badge: "★ 4.9/5 Rezidentlar Ishonchi • Rasmiy Innovatsiya Markazi",
+      title: "Markaziy Osiyoning Yetakchi Texnologik Ekotizimi va Ilmiy Klasteri",
+      subtext: "Technopark — FabLab ustaxonalari, $100,000 gacha bo'lgan grantlar va 100% soliq imtiyozlariga ega bo'lgan innovatsion loyihalar va IT-rezidentlar markazi.",
+      ctaAdd: "Startapni Qo'shish",
+      ctaInfra: "Infratuzilmani Ko'rish",
+      trust1: "✓ 12 ta R&D va FabLab Laboratoriya",
+      trust2: "✓ Xavfsiz Investitsiyalar",
+      trust3: "✓ 24/7 Co-working Zone",
+      calcTitle: "Rezidentlik & Resurslar Hisoblagichi",
+      calcBadge: "Live Calculator",
+      stageLabel: "1. Loyihangiz Bosqichi:",
+      stageIdea: "G'oya",
+      stageMVP: "MVP",
+      stageGrowth: "Growth",
+      needLabel: "2. Zukko Infratuzilma Ehtiyoji:",
+      needCoworking: "Co-working",
+      needFablab: "FabLab / R&D",
+      needServers: "Serverlar",
+      grantEstimateLabel: "Tavsiya etiladigan grant hajmi:",
+      grantEstimateSub: "+ 100% Soliq va bojxona imtiyozlari paketi",
+      applyBtn: "Ariza Topshirish →",
+      stepsBadge: "Akseleratsiya Bosqichlari",
+      stepsTitle: "Rezidentlikka Erishish Qanday Ishlaydi?",
+      step1Title: "1. Loyihani Taqdim Eting",
+      step1Desc: "Platforma orqali onlayn shaklda startapingiz g'oyasi yoki MVP versiyasi hamda pitch deck hujjatini topshiring.",
+      step2Title: "2. Ekspertiza va Mentorlik",
+      step2Desc: "Technopark ilmiy-texnik kengashi va xalqaro mentorlar loyihangiz bozor salohiyatini 1-on-1 baholaydilar.",
+      step3Title: "3. Investitsiya va Rezidentlik",
+      step3Desc: "$100,000 gacha bo'lgan grantlar, soliq imtiyozlari hamda zamonaviy FabLab va R&D laboratoriyalaridan to'liq foydalaning."
+    },
+    infra: {
+      badge: "Technopark Ekotizimi & Laboratoriyalar",
+      title: "Hududiy va Milliy Innovatsiya Infratuzilmasi",
+      subtext: "Qarshi va respublika texnoparklari tajribasi asosida shakllantirilgan zamonaviy laboratoriya, ustaxona hamda inkubatsiya bazasi.",
+      b1Title: "Asosiy Bino va 24/7 Co-working",
+      b1Desc: "Rezidentlar hamda yosh dasturchilar uchun 24/7 ochiq bo'lgan yuqori tezlikdagi optik aloqa va smart ish joylari.",
+      b2Title: "FabLab va Robototexnika Ustaxonalari",
+      b2Desc: "Sanoat 3D-printerlari, CNC frezer stanoklari va mikrosxema elektronika sinov stendlari bilan jihozlangan amaliy ustaxona.",
+      b3Title: "IT va Dasturiy Injiniring Laboratoriyasi",
+      b3Desc: "Sun'iy intellekt, neyrotarmoqlar va kiberxavfsizlik bo'yicha tajriba o'tkazish uchun yuqori unumdorlikka ega server quvvatlari.",
+      b4Title: "Inkubatsiya va Akseleratsiya Dasturi",
+      b4Desc: "G'oya bosqichidagi arizadan boshlab, MVP tayyorlash, ilmiy kengash ekspertizasi va investitsiya jalb qilishgacha bo'lgan 3 oylik intensiv.",
+      taxBadge: "Rezidentlik Talablari va Imtiyozlari",
+      taxTitle: "100% Soliq va Bojxona Imtiyozlari Paketi",
+      taxDesc: "Technopark rezidenti maqomiga ega IT va innovatsion kompaniyalar barcha turdagi soliqlar hamda chet eldan keltiriladigan uskunalar bojxona to'lovlaridan to'liq ozod etiladi."
+    },
+    leadership: {
+      badge: "Rahbariyat va Direksiya",
+      title: "Ijrochi Kengash va Ekspertlar Kengashi",
+      subtext: "Technopark faoliyatini strategik rivojlantirish hamda rezidentlarga xalqaro standartlar bo'yicha yo'nalish beruvchi rahbarlar jamoasi.",
+      linkedin: "LinkedIn Profil"
+    },
+    startups: {
+      badge: "Rezidentlar & Community Hub",
+      title: "Startaplar Ekotizimi va Rezident Loyihalar",
+      subtext: "Technopark inkubatsiyasi va akseleratsiyasidan o'tayotgan loyihalar. Tizimga kirib o'z loyihangizni qo'shishingiz mumkin.",
+      addBtn: "+ Loyiha Qo'shish",
+      searchPlaceholder: "Loyihalarni qidirish...",
+      allTab: "Barchasi",
+      featuredTab: "Featured",
+      founderLabel: "Asoschi:",
+      chatBtn: "Muloqot"
+    },
+    grants: {
+      badge: "Grants & Acceleration",
+      title: "Davlat va Xalqaro Grant Dasturlari",
+      subtext: "Technopark rezidentlari va ilmiy loyihalar uchun ajratilgan maqsadli moliyalashtirish hamda grant fondlari.",
+      deadlineLabel: "Oxirgi muddat:",
+      applied: "✓ Ariza Qabul Qilindi",
+      apply: "Ariza Topshirish"
+    },
+    guestBanner: {
+      badge: "Technopark Hamjamiyati",
+      title: "Ekotizimga Qo'shiling va O'z Startapingizni Taqdim Eting",
+      desc: "Ro'yxatdan o'tgan rezidentlar loyihalar galereyasiga o'z startaplarini joylashtirishlari, $100,000 gacha bo'lgan grantlarga ariza topshirishlari va investitsiyalar jalb qilishlari mumkin.",
+      btn: "Kirish / Ro'yxatdan O'tish →"
+    }
+  },
+
+  ru: {
+    nav: {
+      ecosystem: "Экосистема",
+      infrastructure: "Лаборатории",
+      startups: "Стартапы",
+      grants: "Гранты и Резиденство",
+      signIn: "Войти",
+      signUp: "Регистрация",
+      profile: "Мой профиль",
+      myProjects: "Мои проекты",
+      addProject: "+ Добавить стартап",
+      adminPanel: "Панель админа",
+      signOut: "Выйти"
+    },
+    hero: {
+      badge: "★ 4.9/5 Доверие резидентов • Официальный Центр Инноваций",
+      title: "Ведущая Технологическая Экосистема и Научный Кластер Центральной Азии",
+      subtext: "Technopark — центр R&D лабораторий, грантов до $100,000 и 100% налоговых льгот для IT-резидентов и инновационных стартапов.",
+      ctaAdd: "Добавить Стартап",
+      ctaInfra: "Обзор Инфраструктуры",
+      trust1: "✓ 12 R&D и FabLab Лабораторий",
+      trust2: "✓ Безопасные Инвестиции",
+      trust3: "✓ 24/7 Smart Co-working Zone",
+      calcTitle: "Калькулятор Резиденства и Ресурсов",
+      calcBadge: "Live Calculator",
+      stageLabel: "1. Стадия вашего проекта:",
+      stageIdea: "Идея",
+      stageMVP: "MVP",
+      stageGrowth: "Growth",
+      needLabel: "2. Необходимая Инфраструктура:",
+      needCoworking: "Коворкинг",
+      needFablab: "FabLab / R&D",
+      needServers: "Серверы",
+      grantEstimateLabel: "Рекомендуемый размер гранта:",
+      grantEstimateSub: "+ 100% Пакет налоговых и таможенных льгот",
+      applyBtn: "Подать Заявку →",
+      stepsBadge: "Этапы Акселерации",
+      stepsTitle: "Как Получить Статус Резидента?",
+      step1Title: "1. Подайте Проект",
+      step1Desc: "Отправьте заявку с идеей или MVP вашего стартапа и pitch deck через онлайн платформу.",
+      step2Title: "2. Экспертиза и Менторство",
+      step2Desc: "Научно-технический совет Technopark и международные менторы оценят потенциал 1-on-1.",
+      step3Title: "3. Инвестиции и Резиденство",
+      step3Desc: "Получите гранты до $100,000, налоговые льготы и доступ к FabLab лабораториям."
+    },
+    infra: {
+      badge: "Экосистема Technopark & Лаборатории",
+      title: "Региональная и Национальная Инновационная Инфраструктура",
+      subtext: "Современная база лабораторий и инкубации, сформированная на основе опыта региональных технопарков.",
+      b1Title: "Главный Корпус и 24/7 Коворкинг",
+      b1Desc: "Круглосуточные смарт-рабочие места с высокоскоростной оптической связью для резидентов.",
+      b2Title: "FabLab и Мастерские Робототехники",
+      b2Desc: "Практическая мастерская с промышленными 3D-принтерами, фрезерными станками ЧПУ и микросхемами.",
+      b3Title: "IT и Лаборатория Программной Инженерии",
+      b3Desc: "Высокопроизводительные серверные мощности для экспериментов в области ИИ и кибербезопасности.",
+      b4Title: "Программа Инкубации и Акселерации",
+      b4Desc: "3-месячный интенсив от заявки идеи до защиты перед инвестиционным советом UzVC.",
+      taxBadge: "Требования и Льготы Резидентов",
+      taxTitle: "100% Пакет Налоговых и Таможенных Льгот",
+      taxDesc: "IT-компании со статусом резидента Technopark полностью освобождаются от всех видов налогов и таможенных пошлин."
+    },
+    leadership: {
+      badge: "Руководство и Дирекция",
+      title: "Исполнительный и Экспертный Совет",
+      subtext: "Команда руководителей, определяющая стратегическое развитие Технопарка и направляющая резидентов.",
+      linkedin: "Профиль LinkedIn"
+    },
+    startups: {
+      badge: "Резиденты & Community Hub",
+      title: "Экосистема Стартапов и Проекты Резидентов",
+      subtext: "Проекты, проходящие инкубацию в Technopark. Авторизуйтесь, чтобы добавить свой проект.",
+      addBtn: "+ Добавить Проект",
+      searchPlaceholder: "Поиск проектов...",
+      allTab: "Все",
+      featuredTab: "Featured",
+      founderLabel: "Основатель:",
+      chatBtn: "Чат"
+    },
+    grants: {
+      badge: "Гранты и Акселерация",
+      title: "Государственные и Международные Гранты",
+      subtext: "Целевые фонды финансирования для научных проектов и резидентов Technopark.",
+      deadlineLabel: "Крайний срок:",
+      applied: "✓ Заявка Принята",
+      apply: "Подать Заявку"
+    },
+    guestBanner: {
+      badge: "Сообщество Technopark",
+      title: "Присоединяйтесь к Экосистеме и Представьте Свой Стартап",
+      desc: "Зарегистрированные резиденты могут размещать стартапы в галерее, претендовать на гранты до $100,000 и привлекать инвестиции.",
+      btn: "Войти / Регистрация →"
+    }
+  },
+
+  en: {
+    nav: {
+      ecosystem: "Ecosystem",
+      infrastructure: "Laboratories",
+      startups: "Startups",
+      grants: "Grants & Residency",
+      signIn: "Sign In",
+      signUp: "Sign Up",
+      profile: "My Profile",
+      myProjects: "My Projects",
+      addProject: "+ Add Startup",
+      adminPanel: "Admin Panel",
+      signOut: "Sign Out"
+    },
+    hero: {
+      badge: "★ 4.9/5 Resident Trust • Official Innovation Hub",
+      title: "Central Asia's Leading Tech Ecosystem and R&D Cluster",
+      subtext: "Technopark — A premier hub featuring FabLab workshops, grants up to $100,000, and 100% tax incentives for IT residents.",
+      ctaAdd: "Add Startup",
+      ctaInfra: "Explore Infrastructure",
+      trust1: "✓ 12 R&D & FabLab Labs",
+      trust2: "✓ Secure Investments",
+      trust3: "✓ 24/7 Smart Co-working Zone",
+      calcTitle: "Residency & Resource Calculator",
+      calcBadge: "Live Calculator",
+      stageLabel: "1. Project Stage:",
+      stageIdea: "Idea",
+      stageMVP: "MVP",
+      stageGrowth: "Growth",
+      needLabel: "2. Infrastructure Need:",
+      needCoworking: "Co-working",
+      needFablab: "FabLab / R&D",
+      needServers: "Servers",
+      grantEstimateLabel: "Recommended Grant Amount:",
+      grantEstimateSub: "+ 100% Tax & Customs Exemption Package",
+      applyBtn: "Apply Now →",
+      stepsBadge: "Acceleration Steps",
+      stepsTitle: "How to Obtain Residency Status?",
+      step1Title: "1. Submit Project",
+      step1Desc: "Submit your startup idea or MVP along with pitch deck documents via the online platform.",
+      step2Title: "2. Evaluation & Mentorship",
+      step2Desc: "Technopark scientific committee & international mentors evaluate your market potential 1-on-1.",
+      step3Title: "3. Investment & Residency",
+      step3Desc: "Unlock grants up to $100,000, 0% tax exemptions, and full FabLab facility access."
+    },
+    infra: {
+      badge: "Technopark Ecosystem & Labs",
+      title: "Regional & National Innovation Infrastructure",
+      subtext: "State-of-the-art laboratory and prototyping facility modeled after regional innovation hubs.",
+      b1Title: "Main Campus & 24/7 Co-working",
+      b1Desc: "Round-the-clock smart workspaces with high-speed fiber optics for tech residents.",
+      b2Title: "FabLab & Robotics Workshops",
+      b2Desc: "Industrial 3D printers, CNC milling machines, and microelectronics testing benches.",
+      b3Title: "IT & Software Engineering Lab",
+      b3Desc: "High-performance GPU cluster for Artificial Intelligence, Neural Networks & Cybersecurity.",
+      b4Title: "Incubation & Acceleration Program",
+      b4Desc: "3-month intensive program guiding projects from application to venture funding pitching.",
+      taxBadge: "Residency Benefits",
+      taxTitle: "100% Tax & Customs Exemption Package",
+      taxDesc: "IT companies with Technopark residency status are completely exempt from all corporate income taxes and equipment customs duties."
+    },
+    leadership: {
+      badge: "Leadership & Directorate",
+      title: "Executive & Advisory Board",
+      subtext: "The executive leadership team guiding Technopark's strategic vision and resident growth.",
+      linkedin: "LinkedIn Profile"
+    },
+    startups: {
+      badge: "Residents & Community Hub",
+      title: "Startup Ecosystem & Resident Showcase",
+      subtext: "Projects currently undergoing incubation at Technopark. Sign in to showcase your project.",
+      addBtn: "+ Add Project",
+      searchPlaceholder: "Search projects...",
+      allTab: "All",
+      featuredTab: "Featured",
+      founderLabel: "Founder:",
+      chatBtn: "Chat"
+    },
+    grants: {
+      badge: "Grants & Acceleration",
+      title: "State & International Grant Programs",
+      subtext: "Targeted funding programs and grant funds allocated for Technopark scientific residents.",
+      deadlineLabel: "Deadline:",
+      applied: "✓ Application Submitted",
+      apply: "Apply Now"
+    },
+    guestBanner: {
+      badge: "Technopark Community",
+      title: "Join the Ecosystem & Pitch Your Startup",
+      desc: "Registered residents can showcase startups in the gallery, apply for grants up to $100,000, and raise venture capital.",
+      btn: "Sign In / Register →"
+    }
+  }
+};
+
+export const getTranslation = (lang: AppLanguage) => {
+  return translations[lang] || translations.uz;
+};

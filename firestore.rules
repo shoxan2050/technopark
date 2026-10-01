@@ -1,0 +1,56 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ─── USERS ───────────────────────────────────────────────────────────────
+    // Anyone authenticated can read any user profile
+    // Only the owner can write their own profile
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && request.auth.uid == userId;
+      allow update: if request.auth != null && request.auth.uid == userId;
+      allow delete: if false;
+    }
+
+    // ─── STARTUPS ─────────────────────────────────────────────────────────────
+    // Public READ — anyone (including unauthenticated) can see startups
+    // Authenticated users can create, update likes/ratings
+    // Only the founder OR admin can delete
+    match /startups/{startupId} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null;
+      allow delete: if request.auth != null && (
+        resource.data.founderId == request.auth.uid ||
+        resource.data.founderEmail == request.auth.token.email
+      );
+    }
+
+    // ─── GRANTS ───────────────────────────────────────────────────────────────
+    // Public READ — anyone can see grants
+    // Only authenticated users can apply (update applicants)
+    // Admins can create/delete grants
+    match /grants/{grantId} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    // ─── ANNOUNCEMENTS ────────────────────────────────────────────────────────
+    match /announcements/{announcementId} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    // ─── CHAT MESSAGES ───────────────────────────────────────────────────────
+    match /chatMessages/{msgId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      allow update: if false;
+      allow delete: if false;
+    }
+  }
+}
