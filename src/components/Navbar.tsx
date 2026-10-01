@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Sun, Moon, Globe } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useApp } from '../context/AppContext';
 import type { AppLanguage } from '../types';
 
 export const Navbar: React.FC = () => {
   const { currentUser, isAdmin, signOutUser } = useAuth();
+  const navigate = useNavigate();
   const { 
     isDarkMode,
     toggleDarkMode,
@@ -46,6 +48,17 @@ export const Navbar: React.FC = () => {
     }
   };
 
+  const handleSignOut = async () => {
+    setDropdownOpen(false);
+    setMobileMenuOpen(false);
+    await signOutUser();
+    navigate('/');
+  };
+
+  const handleLogoClick = () => {
+    navigate(currentUser ? '/dashboard' : '/');
+  };
+
   const handleLangSelect = (lang: AppLanguage) => {
     setLanguage(lang);
     setLangMenuOpen(false);
@@ -58,7 +71,7 @@ export const Navbar: React.FC = () => {
           
           {/* Logo & Emblem */}
           <div 
-            onClick={() => scrollToSection('hero')} 
+            onClick={handleLogoClick} 
             className="flex items-center gap-3 cursor-pointer group shrink-0"
           >
             <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 transition-all group-hover:bg-emerald-500/20 group-hover:border-emerald-500/50">
@@ -200,7 +213,7 @@ export const Navbar: React.FC = () => {
 
                     {isAdmin && (
                       <button
-                        onClick={() => { setDropdownOpen(false); scrollToSection('admin-panel'); }}
+                        onClick={() => { setDropdownOpen(false); navigate('/admin'); }}
                         className="w-full text-left px-3 py-2 text-xs font-medium text-amber-500 dark:text-amber-400 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors rounded-lg"
                       >
                         {t.nav.adminPanel}
@@ -210,7 +223,7 @@ export const Navbar: React.FC = () => {
                     <div className="border-t border-slate-100 dark:border-white/10 my-1" />
 
                     <button
-                      onClick={() => { setDropdownOpen(false); signOutUser(); }}
+                      onClick={handleSignOut}
                       className="w-full text-left px-3 py-2 text-xs font-medium text-rose-500 hover:bg-rose-500/10 transition-colors rounded-lg"
                     >
                       {t.nav.signOut}
@@ -320,14 +333,14 @@ export const Navbar: React.FC = () => {
                 </button>
                 {isAdmin && (
                   <button
-                    onClick={() => { setMobileMenuOpen(false); scrollToSection('admin-panel'); }}
+                    onClick={() => { setMobileMenuOpen(false); navigate('/admin'); }}
                     className="w-full text-left py-2 text-xs font-medium text-amber-500 dark:text-amber-400"
                   >
                     {t.nav.adminPanel}
                   </button>
                 )}
                 <button
-                  onClick={() => { setMobileMenuOpen(false); signOutUser(); }}
+                  onClick={handleSignOut}
                   className="w-full text-left py-2 text-xs font-medium text-rose-500"
                 >
                   {t.nav.signOut}

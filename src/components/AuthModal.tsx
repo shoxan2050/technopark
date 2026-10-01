@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useApp } from '../context/AppContext';
 
 export const AuthModal: React.FC = () => {
   const { isAuthModalOpen, setIsAuthModalOpen } = useApp();
   const { signIn, signUp } = useAuth();
+  const navigate = useNavigate();
 
   const [isSignUp, setIsSignUp] = useState(false);
   const [name, setName] = useState('');
@@ -62,6 +64,7 @@ export const AuthModal: React.FC = () => {
         await signIn(email, password);
       }
       setIsAuthModalOpen(false);
+      navigate('/dashboard');
     } catch (err: any) {
       setError(err.message || "Xatolik yuz berdi");
     } finally {
