@@ -40,13 +40,13 @@ export const Hero: React.FC = () => {
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
           alt="Technopark Architecture"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center opacity-40 dark:opacity-35"
         />
       </div>
 
-      {/* Overlay qatlamlari */}
-      <div className="absolute inset-0 bg-slate-100/70 dark:bg-[#070B11]/70 -z-10" />
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-100/90 via-slate-100/60 to-transparent dark:from-[#070B11]/90 dark:via-[#070B11]/60 dark:to-transparent -z-10" />
+      {/* Overlay qatlamlari (Shaffoflik ta'minlangan) */}
+      <div className="absolute inset-0 bg-slate-100/30 dark:bg-[#070B11]/40 -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-100/90 via-slate-100/50 to-transparent dark:from-[#070B11]/90 dark:via-[#070B11]/50 dark:to-transparent -z-10" />
       <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-100 dark:from-[#070B11] to-transparent -z-10" />
 
       {/* MANA SHU ASOSIY QUTI EKRANNING QOQ O'RTASIDA TURISHI SHART: */}

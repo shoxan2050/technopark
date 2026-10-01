@@ -54,7 +54,7 @@ export const Navbar: React.FC = () => {
   return (
     <header className="sticky top-0 z-40 w-full glass-nav-emerald transition-colors duration-200">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between h-16">
+        <div className="flex items-center justify-between gap-6 h-16">
           
           {/* Logo & Emblem */}
           <div 
@@ -76,36 +76,36 @@ export const Navbar: React.FC = () => {
             </div>
           </div>
 
-          {/* Navigation Links — Centered */}
-          <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+          {/* Navigation Links — Spaced & Centered */}
+          <nav className="hidden md:flex items-center gap-5 lg:gap-8 mx-auto">
             <button 
               onClick={() => scrollToSection('hero')} 
-              className="text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors"
+              className="text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors whitespace-nowrap"
             >
               {t.nav.ecosystem}
             </button>
             <button 
               onClick={() => scrollToSection('infrastructure')} 
-              className="text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors"
+              className="text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors whitespace-nowrap"
             >
               {t.nav.infrastructure}
             </button>
             <button 
               onClick={() => scrollToSection('startups')} 
-              className="text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors"
+              className="text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors whitespace-nowrap"
             >
               {t.nav.startups}
             </button>
             <button 
               onClick={() => scrollToSection('grants')} 
-              className="text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors"
+              className="text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors whitespace-nowrap"
             >
               {t.nav.grants}
             </button>
           </nav>
 
           {/* Right Action Bar */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3 shrink-0">
             
             {/* Language Selector Dropdown */}
             <div className="relative" ref={langRef}>
