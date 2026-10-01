@@ -88,14 +88,6 @@ export const StartupGrid: React.FC = () => {
           <p className="mt-2 text-sm text-slate-600 dark:text-slate-300 max-w-xl mx-auto">
             {t.startups.subtext}
           </p>
-          <div className="mt-5 flex justify-center">
-            <button
-              onClick={handleAddProject}
-              className="px-6 py-2.5 text-xs font-bold btn-emerald"
-            >
-              {t.startups.addBtn}
-            </button>
-          </div>
         </div>
 
         {/* Filters & Search Header */}

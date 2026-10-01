@@ -37,9 +37,9 @@ export const ResidentDashboardHeader: React.FC = () => {
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
           alt="Technopark Architecture"
-          className="w-full h-full object-cover object-center opacity-30 dark:opacity-25"
+          className="w-full h-full object-cover object-center opacity-50 dark:opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-100/70 via-slate-100/90 to-slate-100 dark:from-[#070B11]/70 dark:via-[#070B11]/90 dark:to-[#070B11]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-100/50 via-slate-100/75 to-slate-100 dark:from-[#070B11]/50 dark:via-[#070B11]/75 dark:to-[#070B11]" />
       </div>
 
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
