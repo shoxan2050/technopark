@@ -69,18 +69,18 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 dark:border-white/10 bg-white/90 dark:bg-[#070B11]/90 backdrop-blur-md transition-colors duration-200">
-      {/* MANA SHU QUTI HAMMA ELEMENTLARNI PASTKI BLOK BILAN BIR XIL O'QQA SOLADI: max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 */}
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      {/* MANA SHU QUTI HAMMA ELEMENTLARNI PASTKI BLOK BILAN BIR XIL O'QQA SOLADI: max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 */}
+      <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         
         {/* 1. Chap tomon: Hamburger Menu + Technopark Logo */}
         <div className="flex items-center gap-3 shrink-0">
           <button
             onClick={() => setIsAboutModalOpen(true)}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-xs font-bold transition-all shadow-sm"
-            title="Technopark haqida (Biz haqimizda)"
+            title={t.nav.aboutUs}
           >
             <Menu className="w-4 h-4" />
-            <span className="hidden sm:inline">Biz haqimizda</span>
+            <span className="hidden sm:inline">{t.nav.aboutUs}</span>
           </button>
 
           <Link 

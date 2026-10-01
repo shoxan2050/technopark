@@ -106,8 +106,8 @@ export const translations = {
     footer: {
       desc: "O'zbekiston IT va startap ekotizimini rivojlantirish bo'yicha yagona zamonaviy platforma. Venchur investitsiyalar, inkubatsiya va innovatsiyalar markazi.",
       navTitle: "NAVIGATSIYA",
-      contactTitle: "MANZIL & ALOQA",
-      address: "Toshkent shahri, Yashnobod tumani, Maxtumquli ko'chasi, Technopark Binosi",
+      contactTitle: "MANZIL & FILIALLAR",
+      address: "Bosh bino: Toshkent shahri, Yashnobod tumani | Filial: Qarshi shahri, Yoshlar Texnoparki",
       phone: "Tel: +998 71 200 00 00",
       copyright: "© 2026 Technopark & Startup Hub. Barcha huquqlar himoyalangan.",
       madeWith: "Senior Full-Stack & UI/UX Injenering tomonidan ❤️ bilan yaratildi"
@@ -219,8 +219,8 @@ export const translations = {
     footer: {
       desc: "Единая современная платформа развития IT и стартап экосистемы Узбекистана. Центр венчурных инвестиций, инкубации и инноваций.",
       navTitle: "НАВИГАЦИЯ",
-      contactTitle: "АДРЕС И КОНТАКТЫ",
-      address: "г. Ташкент, Яшнабадский район, ул. Махтумкули, Здание Технопарка",
+      contactTitle: "АДРЕСА И ФИЛИАЛЫ",
+      address: "Главный офис: г. Ташкент, Яшнабадский район | Филиал: г. Карши, Молодежный Технопарк",
       phone: "Тел: +998 71 200 00 00",
       copyright: "© 2026 Technopark & Startup Hub. Все права защищены.",
       madeWith: "Создано с ❤️ Senior Full-Stack & UI/UX Инженерией"
@@ -332,8 +332,8 @@ export const translations = {
     footer: {
       desc: "Unified modern platform for IT and startup ecosystem development in Uzbekistan. Venture capital, incubation, and innovation hub.",
       navTitle: "NAVIGATION",
-      contactTitle: "ADDRESS & CONTACTS",
-      address: "Tashkent city, Yashnabad district, Makhtumkuli street, Technopark Building",
+      contactTitle: "ADDRESSES & BRANCHES",
+      address: "HQ: Tashkent city, Yashnabad district | Branch: Karshi city, Youth Technopark",
       phone: "Tel: +998 71 200 00 00",
       copyright: "© 2026 Technopark & Startup Hub. All rights reserved.",
       madeWith: "Built with ❤️ by Senior Full-Stack & UI/UX Engineering"
