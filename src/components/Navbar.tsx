@@ -127,14 +127,14 @@ export const Navbar: React.FC = () => {
           </button>
         </nav>
 
-        {/* 3. O'ng tomon: Til, Rejim va Profil (Pastki kartochkaning o'ng burchagi bilan bir chiziqda) */}
-        <div className="flex items-center gap-3 shrink-0">
+        {/* 3. O'ng tomon: Til, Rejim va Profil / Auth */}
+        <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
           
           {/* Til tanlash */}
           <div className="relative" ref={langRef}>
             <button
               onClick={() => setLangMenuOpen(!langMenuOpen)}
-              className="px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-white/10 flex items-center gap-1.5 transition-all"
+              className="px-2 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-white/10 flex items-center gap-1 transition-all"
               title="Language"
             >
               <Globe className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
@@ -186,7 +186,7 @@ export const Navbar: React.FC = () => {
 
           {/* User avatari va menyusi / Auth tugmalari */}
           {currentUser ? (
-            <div className="relative pl-2 border-l border-slate-200 dark:border-white/10" ref={dropdownRef}>
+            <div className="relative pl-1.5 sm:pl-2 border-l border-slate-200 dark:border-white/10" ref={dropdownRef}>
               <button 
                 onClick={() => setDropdownOpen(!dropdownOpen)}
                 className="w-8 h-8 rounded-full bg-slate-800 border-2 border-emerald-500/40 hover:border-emerald-400 flex items-center justify-center text-sm shadow-sm overflow-hidden transition-colors"
@@ -241,16 +241,16 @@ export const Navbar: React.FC = () => {
               )}
             </div>
           ) : (
-            <div className="flex items-center gap-2.5 pl-2 border-l border-slate-200 dark:border-white/10">
+            <div className="hidden sm:flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-white/10">
               <button
                 onClick={() => setIsAuthModalOpen(true)}
-                className="px-3 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                className="px-2.5 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
               >
                 {t.nav.signIn}
               </button>
               <button
                 onClick={() => setIsAuthModalOpen(true)}
-                className="px-4 py-1.5 text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl shadow-sm transition-all"
+                className="px-3 py-1.5 text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl shadow-sm transition-all"
               >
                 {t.nav.signUp}
               </button>
@@ -263,7 +263,7 @@ export const Navbar: React.FC = () => {
             className="md:hidden p-1.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
             aria-label="Toggle menu"
           >
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               {mobileMenuOpen ? (
                 <path d="M6 18L18 6M6 6l12 12" strokeLinecap="round" strokeLinejoin="round"/>
               ) : (
@@ -277,7 +277,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-white/10 px-4 py-4 space-y-3">
+        <div className="pointer-events-auto md:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl mx-3 mt-2 px-4 py-4 space-y-3 shadow-2xl animate-in fade-in duration-150">
           <nav className="flex flex-col space-y-2 text-xs font-medium text-slate-700 dark:text-slate-300">
             <button 
               onClick={() => scrollToSection('ecosystem')} 
@@ -303,7 +303,30 @@ export const Navbar: React.FC = () => {
             >
               {t.nav.grants}
             </button>
+            <button
+              onClick={() => { setMobileMenuOpen(false); setIsAboutModalOpen(true); }}
+              className="text-left py-2 hover:text-emerald-600 dark:hover:text-emerald-400 border-t border-slate-100 dark:border-white/10 pt-2 font-bold text-emerald-600 dark:text-emerald-400"
+            >
+              ℹ️ {t.nav.aboutUs}
+            </button>
           </nav>
+
+          {!currentUser && (
+            <div className="pt-2 border-t border-slate-100 dark:border-white/10 flex flex-col gap-2">
+              <button
+                onClick={() => { setMobileMenuOpen(false); setIsAuthModalOpen(true); }}
+                className="w-full py-2 text-xs font-bold text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 rounded-xl"
+              >
+                {t.nav.signIn}
+              </button>
+              <button
+                onClick={() => { setMobileMenuOpen(false); setIsAuthModalOpen(true); }}
+                className="w-full py-2 text-xs font-bold bg-emerald-600 text-white rounded-xl shadow-sm"
+              >
+                {t.nav.signUp}
+              </button>
+            </div>
+          )}
         </div>
       )}
     </header>
