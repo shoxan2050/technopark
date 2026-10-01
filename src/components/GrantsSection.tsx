@@ -49,7 +49,7 @@ export const GrantsSection: React.FC = () => {
                       {grant.category}
                     </span>
                     <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                      {grant.applicantsCount} Arizachilar
+                      {grant.applicantsCount} {t.grants.applicantsLabel}
                     </span>
                   </div>
 
@@ -73,7 +73,7 @@ export const GrantsSection: React.FC = () => {
 
                   {hasApplied ? (
                     <div className="w-full py-2.5 rounded-lg badge-emerald text-xs font-bold text-center">
-                      ✓ {t.grants.applied}
+                      {t.grants.applied}
                     </div>
                   ) : (
                     <button

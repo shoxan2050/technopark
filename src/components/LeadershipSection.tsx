@@ -14,23 +14,23 @@ export const LeadershipSection: React.FC = () => {
 
   const leadership: ExecutiveMember[] = [
     {
-      name: 'Farhod Ibragimov',
-      title: 'Bosh Direktor (CEO)',
-      division: 'Technopark Direksiyasi',
+      name: t.leadership.ceoTitle,
+      title: t.leadership.ceoRole,
+      division: t.leadership.ceoCategory,
       image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600',
       linkedin: 'https://linkedin.com'
     },
     {
-      name: 'Sherzod Shermatov',
-      title: "R&D va Texnologiyalar Bo'yicha Direktor",
-      division: 'Ilmiy-Ishlab Chiqarish Klasteri',
+      name: t.leadership.rndTitle,
+      title: t.leadership.rndRole,
+      division: t.leadership.rndCategory,
       image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600',
       linkedin: 'https://linkedin.com'
     },
     {
       name: 'Elena Smirnova',
-      title: 'Investitsiya Kengashi Raisi',
-      division: 'Venchur va Akseleratsiya Fondi',
+      title: t.leadership.badge.includes('Руководство') ? 'Председатель Инвестиционного Совета' : t.leadership.badge.includes('Leadership') ? 'Chair of Investment Board' : 'Investitsiya Kengashi Raisi',
+      division: t.leadership.badge.includes('Руководство') ? 'ВЕНЧУРНЫЙ И АКСЕЛЕРАЦИОННЫЙ ФОНД' : t.leadership.badge.includes('Leadership') ? 'VENTURE & ACCELERATION FUND' : 'VENCHUR VA AKSELERATSIYA FONDI',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600',
       linkedin: 'https://linkedin.com'
     }
@@ -53,7 +53,7 @@ export const LeadershipSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Executive Cards — unified card: photo on top, info below */}
+        {/* Executive Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {leadership.map((member, idx) => (
             <div
@@ -62,14 +62,13 @@ export const LeadershipSection: React.FC = () => {
               data-animate
               data-delay={String(idx * 150)}
             >
-              {/* Photo — full width, fixed height, bosh qism kesilmasin */}
+              {/* Photo */}
               <div className="w-full h-72 overflow-hidden relative">
                 <img
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 ease-out"
                 />
-                {/* Subtle bottom gradient only in dark */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 dark:opacity-60 transition-opacity" />
               </div>
 

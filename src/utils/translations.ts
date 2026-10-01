@@ -7,6 +7,7 @@ export const translations = {
       infrastructure: "Laboratoriyalar",
       startups: "Startaplar",
       grants: "Grantlar & Rezidentlik",
+      aboutUs: "Biz haqimizda",
       signIn: "Kirish",
       signUp: "Ro'yxatdan o'tish",
       profile: "Profilim",
@@ -66,7 +67,13 @@ export const translations = {
       badge: "Rahbariyat va Direksiya",
       title: "Ijrochi Kengash va Ekspertlar Kengashi",
       subtext: "Technopark faoliyatini strategik rivojlantirish hamda rezidentlarga xalqaro standartlar bo'yicha yo'nalish beruvchi rahbarlar jamoasi.",
-      linkedin: "LinkedIn Profil"
+      linkedin: "LinkedIn Profil",
+      ceoCategory: "TECHNOPARK DIREKSIYASI",
+      ceoTitle: "Farhod Ibragimov",
+      ceoRole: "Bosh Direktor (CEO)",
+      rndCategory: "ILMIY-ISHLAB CHIQARISH KLASTERI",
+      rndTitle: "Sherzod Shermatov",
+      rndRole: "R&D va Texnologiyalar Bo'yicha Direktor"
     },
     startups: {
       badge: "Rezidentlar & Community Hub",
@@ -75,15 +82,18 @@ export const translations = {
       addBtn: "+ Loyiha Qo'shish",
       searchPlaceholder: "Loyihalarni qidirish...",
       allTab: "Barchasi",
-      featuredTab: "Featured",
+      topRatedTab: "Top Reyting",
+      popularTab: "Eng Ommabop",
       founderLabel: "Asoschi:",
-      chatBtn: "Muloqot"
+      chatBtn: "Muloqot",
+      noStartups: "Hozircha hech qanday startap topilmadi."
     },
     grants: {
-      badge: "Grants & Acceleration",
+      badge: "Grantlar & Akseleratsiya",
       title: "Davlat va Xalqaro Grant Dasturlari",
       subtext: "Technopark rezidentlari va ilmiy loyihalar uchun ajratilgan maqsadli moliyalashtirish hamda grant fondlari.",
       deadlineLabel: "Oxirgi muddat:",
+      applicantsLabel: "Arizachilar",
       applied: "✓ Ariza Qabul Qilindi",
       apply: "Ariza Topshirish"
     },
@@ -92,6 +102,15 @@ export const translations = {
       title: "Ekotizimga Qo'shiling va O'z Startapingizni Taqdim Eting",
       desc: "Ro'yxatdan o'tgan rezidentlar loyihalar galereyasiga o'z startaplarini joylashtirishlari, $100,000 gacha bo'lgan grantlarga ariza topshirishlari va investitsiyalar jalb qilishlari mumkin.",
       btn: "Kirish / Ro'yxatdan O'tish →"
+    },
+    footer: {
+      desc: "O'zbekiston IT va startap ekotizimini rivojlantirish bo'yicha yagona zamonaviy platforma. Venchur investitsiyalar, inkubatsiya va innovatsiyalar markazi.",
+      navTitle: "NAVIGATSIYA",
+      contactTitle: "MANZIL & ALOQA",
+      address: "Toshkent shahri, Yashnobod tumani, Maxtumquli ko'chasi, Technopark Binosi",
+      phone: "Tel: +998 71 200 00 00",
+      copyright: "© 2026 Technopark & Startup Hub. Barcha huquqlar himoyalangan.",
+      madeWith: "Senior Full-Stack & UI/UX Injenering tomonidan ❤️ bilan yaratildi"
     }
   },
 
@@ -101,6 +120,7 @@ export const translations = {
       infrastructure: "Лаборатории",
       startups: "Стартапы",
       grants: "Гранты и Резиденство",
+      aboutUs: "О нас",
       signIn: "Войти",
       signUp: "Регистрация",
       profile: "Мой профиль",
@@ -160,7 +180,13 @@ export const translations = {
       badge: "Руководство и Дирекция",
       title: "Исполнительный и Экспертный Совет",
       subtext: "Команда руководителей, определяющая стратегическое развитие Технопарка и направляющая резидентов.",
-      linkedin: "Профиль LinkedIn"
+      linkedin: "Профиль LinkedIn",
+      ceoCategory: "ДИРЕКЦИЯ ТЕХНОПАРКА",
+      ceoTitle: "Фарход Ибрагимов",
+      ceoRole: "Генеральный Директор (CEO)",
+      rndCategory: "НАУЧНО-ПРОИЗВОДСТВЕННЫЙ КЛАСТЕР",
+      rndTitle: "Шерзод Шерматов",
+      rndRole: "Директор по R&D и Технологиям"
     },
     startups: {
       badge: "Резиденты & Community Hub",
@@ -169,15 +195,18 @@ export const translations = {
       addBtn: "+ Добавить Проект",
       searchPlaceholder: "Поиск проектов...",
       allTab: "Все",
-      featuredTab: "Featured",
+      topRatedTab: "Топ Рейтинг",
+      popularTab: "Популярные",
       founderLabel: "Основатель:",
-      chatBtn: "Чат"
+      chatBtn: "Чат",
+      noStartups: "Стартапы пока не найдены."
     },
     grants: {
       badge: "Гранты и Акселерация",
       title: "Государственные и Международные Гранты",
       subtext: "Целевые фонды финансирования для научных проектов и резидентов Technopark.",
       deadlineLabel: "Крайний срок:",
+      applicantsLabel: "Заявителей",
       applied: "✓ Заявка Принята",
       apply: "Подать Заявку"
     },
@@ -186,6 +215,15 @@ export const translations = {
       title: "Присоединяйтесь к Экосистеме и Представьте Свой Стартап",
       desc: "Зарегистрированные резиденты могут размещать стартапы в галерее, претендовать на гранты до $100,000 и привлекать инвестиции.",
       btn: "Войти / Регистрация →"
+    },
+    footer: {
+      desc: "Единая современная платформа развития IT и стартап экосистемы Узбекистана. Центр венчурных инвестиций, инкубации и инноваций.",
+      navTitle: "НАВИГАЦИЯ",
+      contactTitle: "АДРЕС И КОНТАКТЫ",
+      address: "г. Ташкент, Яшнабадский район, ул. Махтумкули, Здание Технопарка",
+      phone: "Тел: +998 71 200 00 00",
+      copyright: "© 2026 Technopark & Startup Hub. Все права защищены.",
+      madeWith: "Создано с ❤️ Senior Full-Stack & UI/UX Инженерией"
     }
   },
 
@@ -195,6 +233,7 @@ export const translations = {
       infrastructure: "Laboratories",
       startups: "Startups",
       grants: "Grants & Residency",
+      aboutUs: "About Us",
       signIn: "Sign In",
       signUp: "Sign Up",
       profile: "My Profile",
@@ -254,7 +293,13 @@ export const translations = {
       badge: "Leadership & Directorate",
       title: "Executive & Advisory Board",
       subtext: "The executive leadership team guiding Technopark's strategic vision and resident growth.",
-      linkedin: "LinkedIn Profile"
+      linkedin: "LinkedIn Profile",
+      ceoCategory: "TECHNOPARK DIRECTORATE",
+      ceoTitle: "Farhod Ibragimov",
+      ceoRole: "General Director (CEO)",
+      rndCategory: "R&D & MANUFACTURING CLUSTER",
+      rndTitle: "Sherzod Shermatov",
+      rndRole: "R&D and Technology Director"
     },
     startups: {
       badge: "Residents & Community Hub",
@@ -263,15 +308,18 @@ export const translations = {
       addBtn: "+ Add Project",
       searchPlaceholder: "Search projects...",
       allTab: "All",
-      featuredTab: "Featured",
+      topRatedTab: "Top Rated",
+      popularTab: "Most Popular",
       founderLabel: "Founder:",
-      chatBtn: "Chat"
+      chatBtn: "Chat",
+      noStartups: "No startups found yet."
     },
     grants: {
       badge: "Grants & Acceleration",
       title: "State & International Grant Programs",
       subtext: "Targeted funding programs and grant funds allocated for Technopark scientific residents.",
       deadlineLabel: "Deadline:",
+      applicantsLabel: "Applicants",
       applied: "✓ Application Submitted",
       apply: "Apply Now"
     },
@@ -280,6 +328,15 @@ export const translations = {
       title: "Join the Ecosystem & Pitch Your Startup",
       desc: "Registered residents can showcase startups in the gallery, apply for grants up to $100,000, and raise venture capital.",
       btn: "Sign In / Register →"
+    },
+    footer: {
+      desc: "Unified modern platform for IT and startup ecosystem development in Uzbekistan. Venture capital, incubation, and innovation hub.",
+      navTitle: "NAVIGATION",
+      contactTitle: "ADDRESS & CONTACTS",
+      address: "Tashkent city, Yashnabad district, Makhtumkuli street, Technopark Building",
+      phone: "Tel: +998 71 200 00 00",
+      copyright: "© 2026 Technopark & Startup Hub. All rights reserved.",
+      madeWith: "Built with ❤️ by Senior Full-Stack & UI/UX Engineering"
     }
   }
 };

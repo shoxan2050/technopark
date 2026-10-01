@@ -1,7 +1,10 @@
 import React from 'react';
 import { Heart } from 'lucide-react';
+import { useApp } from '../context/AppContext';
 
 export const Footer: React.FC = () => {
+  const { t } = useApp();
+
   return (
     <footer className="w-full flex justify-center border-t border-slate-200/60 dark:border-white/10 bg-slate-100/60 dark:bg-[#05080E] text-slate-700 dark:text-slate-300 transition-colors pt-16 pb-12">
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,7 +30,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="text-xs text-slate-600 dark:text-slate-400 max-w-sm leading-relaxed mb-6">
-              O'zbekiston IT va startap ekotizimini rivojlantirish bo'yicha yagona zamonaviy platforma. Venchur investitsiyalar, inkubatsiya va innovatsiyalar markazi.
+              {t.footer.desc}
             </p>
 
             <div className="flex items-center gap-3">
@@ -52,35 +55,34 @@ export const Footer: React.FC = () => {
           {/* Quick Nav */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider mb-4 text-slate-900 dark:text-white">
-              Navigatsiya
+              {t.footer.navTitle}
             </h4>
             <ul className="space-y-2.5 text-xs font-medium text-slate-600 dark:text-slate-400">
-              <li><a href="#hero" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Bosh sahifa</a></li>
-              <li><a href="#infrastructure" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Infratuzilma</a></li>
-              <li><a href="#startups" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Startaplar Ekotizimi</a></li>
-              <li><a href="#grants" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Mukofotlar va Grantlar</a></li>
-              <li><a href="#leadership" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Mentorlar Jamoasi</a></li>
+              <li><a href="#hero" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">{t.nav.ecosystem}</a></li>
+              <li><a href="#infrastructure" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">{t.nav.infrastructure}</a></li>
+              <li><a href="#startups" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">{t.nav.startups}</a></li>
+              <li><a href="#grants" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">{t.nav.grants}</a></li>
             </ul>
           </div>
 
           {/* Contact & Support */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider mb-4 text-slate-900 dark:text-white">
-              Manzil & Aloqa
+              {t.footer.contactTitle}
             </h4>
             <div className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
-              <p>Toshkent shahri, Yashnobod tumani, Maxtumquli ko'chasi, Technopark Binosi</p>
+              <p>{t.footer.address}</p>
               <p>Email: <a href="mailto:info@technopark.uz" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">info@technopark.uz</a></p>
-              <p>Tel: +998 71 200 00 00</p>
+              <p>{t.footer.phone}</p>
             </div>
           </div>
 
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs border-t border-slate-200/60 dark:border-white/10 text-slate-500 dark:text-slate-400">
-          <p>© 2026 Technopark & Startup Hub. Barcha huquqlar himoyalangan.</p>
+          <p>{t.footer.copyright}</p>
           <p className="flex items-center gap-1">
-            Senior Full-Stack & UI/UX Injenering tomonidan <Heart className="w-3.5 h-3.5 text-rose-500 fill-current mx-0.5" /> bilan yaratildi
+            {t.footer.madeWith} <Heart className="w-3.5 h-3.5 text-rose-500 fill-current mx-0.5 shrink-0" />
           </p>
         </div>
 
