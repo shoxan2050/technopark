@@ -241,16 +241,16 @@ export const Navbar: React.FC = () => {
               )}
             </div>
           ) : (
-            <div className="hidden sm:flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-white/10">
+            <div className="flex items-center gap-1 sm:gap-2 pl-1.5 sm:pl-2 border-l border-slate-200 dark:border-white/10">
               <button
                 onClick={() => setIsAuthModalOpen(true)}
-                className="px-2.5 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                className="px-2 py-1 text-xs font-extrabold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors whitespace-nowrap"
               >
                 {t.nav.signIn}
               </button>
               <button
                 onClick={() => setIsAuthModalOpen(true)}
-                className="px-3 py-1.5 text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl shadow-sm transition-all"
+                className="hidden sm:inline-flex px-3 py-1.5 text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl shadow-sm transition-all"
               >
                 {t.nav.signUp}
               </button>
