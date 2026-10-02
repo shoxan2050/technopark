@@ -79,11 +79,8 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs border-t border-slate-200/60 dark:border-white/10 text-slate-500 dark:text-slate-400">
+        <div className="pt-8 flex items-center justify-center text-xs border-t border-slate-200/60 dark:border-white/10 text-slate-500 dark:text-slate-400">
           <p>{t.footer.copyright}</p>
-          <p className="flex items-center gap-1">
-            {t.footer.madeWith} <Heart className="w-3.5 h-3.5 text-rose-500 fill-current mx-0.5 shrink-0" />
-          </p>
         </div>
 
       </div>
